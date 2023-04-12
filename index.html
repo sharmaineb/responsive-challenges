@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finland</title>
+  <style>
+    some-element {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body, html {
+      /* Make the body expand to the full height of the window */
+      height: 100%;
+    }
+    body {
+      /* Center the dashboard in the window */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #fff;
+      /* background-color: rgb(119, 216, 216); */
+      /* background-image: url(images/finland-6.png); */
+      background-size: cover;
+    }
+
+    .dashboard {
+      /* border: 1px solid #000; */
+      max-width: 800px;
+      height: 600px;
+      /* Layout the dashboard grid */
+      display: grid;
+      grid-gap: 15px;
+      grid-template-areas: "t t t t"  /* .title first row*/
+                           "m w w w"  /* .monster and .welcome second row */
+                           "p c l g"; /* parents, customize, level-up, and play row 3 */
+      grid-template-rows: 100px 200px 200px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    button {
+      padding: 0.5rem;
+      border: none;
+      background-color: #fff;
+    }
+
+    input {
+      padding: 0.5rem;
+    }
+
+    button, input {
+      margin: 0  0 1rem 0;
+    }
+
+    label {
+      font-size: 0.85rem;
+    }
+
+    /* Name each of the areas t, m, w, p, c, l, and g */
+    .title { 
+      grid-area: t; 
+      text-align: center;
+      color: #000;
+    }
+    .population { 
+      grid-area: m; 
+      background-image: url(images/finland-8.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .welcome { 
+      grid-area: w; 
+      background-image: url(images/finland-2.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .gdp { 
+      grid-area: p; 
+      background-image: url(images/finland-3.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .code { 
+      grid-area: c; 
+      background-image: url(images/finland-4.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .govt { 
+      grid-area: l; 
+      background-image: url(images/finland-1.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .news { 
+      grid-area: g;
+      background-image: url(images/finland-5.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .news button {
+      align-self: flex-end;
+    }
+
+    .grid-cell {
+      background-color: #fff;
+      padding: 1em;
+    }
+
+    .nato {
+      position: absolute;
+      padding: 1rem;
+      background-color: gold;
+      color: #000;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      right: -20px;
+      top: -20px;
+      transform: rotate(15deg);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header class="title">
+      <h1>Finland</h1>
+      <p>NATO member!</p>
+    </header>
+    
+
+    <div class="population grid-cell">
+        <h2>population: </h2>
+        <p>5,536,146</p>
+    </div>
+    
+    <div class="welcome grid-cell">
+      <h2>Welcome</h2>
+      <p>Natural Resources, Economic Initiatives, Community Spaces</p>
+    </div>
+
+    <div class="gdp grid-cell">
+      <h2>GDP</h2>
+      <p>257 billion</p>
+    </div>
+    <div class="code grid-cell">
+      <h2>Calling Code</h2>
+      <p>+ 358</p>
+    </div>
+    <div class="govt grid-cell">
+      <h2>Government</h2>
+      <p>Unitary parliamentary republic</p>
+      <div class="nato">NATO Member!</div>
+    </div>
+    <div class="news grid-cell">
+      <h2>News</h2>
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="name"/>
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="email"/>
+        <button>Send</button>
+    </div>
+  </div>
+  
+</body>
+</html>
